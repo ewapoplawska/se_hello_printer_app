@@ -12,3 +12,6 @@ run:
 
 test:
 	PYTHONPATH=. py.test
+
+docker_build:
+	docker_build -t hello-world-printer
