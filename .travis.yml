@@ -11,3 +11,7 @@
   after_success:
     - make docker_build
     - make docker_push
+deploy:
+  provider: heroku
+  app: infinite-plains-60004
+  api_key: ${HEROKU_API_KEY}
