@@ -10,6 +10,8 @@ script:
   - make lint
 after_success:
   - make docker_build
+  - make docker_run
+  - python test-api/api_test.py
   - make docker_push
 deploy:
   provider: heroku
